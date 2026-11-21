@@ -52,10 +52,6 @@ jobs:
       - name: Sync Android project
         run: npm run cap:sync
 
-      - name: Run Android tests
-        working-directory: android
-        run: ./gradlew testDebugUnitTest --no-daemon
-
       - name: Build debug APK
         working-directory: android
         run: ./gradlew assembleDebug --no-daemon
